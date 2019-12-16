@@ -1,4 +1,3 @@
-
 from game import Game, Character, Group
 
 if __name__ == '__main__':
