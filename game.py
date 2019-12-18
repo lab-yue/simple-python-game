@@ -1,6 +1,7 @@
 from typing import List
 from character import Character, Group
 
+
 class Game(object):
 
     def __init__(self, characters: List['Character']):
@@ -10,7 +11,8 @@ class Game(object):
     def run(self):
         self.info('バトル開始')
         while self.is_game_continue:
-            self.current_character.attack(self.attackee)
+            if self.current_character.is_alive:
+                self.current_character.attack(self.attackee)
         self.info('バトル終了')
 
         for character in self.characters:
